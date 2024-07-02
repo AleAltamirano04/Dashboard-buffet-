@@ -1,0 +1,38 @@
+body{
+    background-color: whitesmoke;
+}
+
+#contenedor {
+    overflow: hidden;
+  }
+
+#contenedor {
+    -ms-overflow-style: none;  /* Para IE y Edge */
+  }
+
+  /* Para navegadores Webkit como Chrome, Safari y Opera */
+  #contenedor::-webkit-scrollbar {
+    display: none;
+  }
+
+.box-left{
+    background-color: black;
+    margin-right: 2%;
+    height: 100vh;
+    width: 260px;
+    margin-left: 0%;
+}
+
+.box-midle{
+    background-color: blue;
+    height: 100vh;
+    margin-right: 0%;
+}
+
+.box-right{
+    background-color: blueviolet;
+    height: 100vh;
+    width: 350px;
+    margin-left: 2%;
+    margin-right: 0%;
+}
