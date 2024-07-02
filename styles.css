@@ -1,38 +1,120 @@
 body{
-    background-color: whitesmoke;
+    background-color: rgb(202, 190, 190);
 }
 
 #contenedor {
-    overflow: hidden;
-  }
+  overflow: hidden;
+  height: 100vh;
+}
 
 #contenedor {
-    -ms-overflow-style: none;  /* Para IE y Edge */
-  }
-
-  /* Para navegadores Webkit como Chrome, Safari y Opera */
-  #contenedor::-webkit-scrollbar {
-    display: none;
-  }
-
-.box-left{
-    background-color: black;
-    margin-right: 2%;
-    height: 100vh;
-    width: 260px;
-    margin-left: 0%;
+  -ms-overflow-style: none;  /* For IE and Edge */
 }
 
-.box-midle{
-    background-color: blue;
-    height: 100vh;
-    margin-right: 0%;
+/* For Webkit browsers like Chrome, Safari, and Opera */
+#contenedor::-webkit-scrollbar {
+  display: none;
 }
 
-.box-right{
-    background-color: blueviolet;
-    height: 100vh;
-    width: 350px;
-    margin-left: 2%;
-    margin-right: 0%;
+.box-left {
+  background-color: black;
+  height: 100vh;
+  width: 200px; /* Adjust width as needed */
+  margin-right: 1%; /* Small white space */
+  left: 0%;
+}
+
+.box-midle {
+  background-color: blue;
+  height: 100vh;
+  width: calc(100% - 220px - 310px); /* Adjust middle column to fill remaining space */
+  margin-right: 0%; /* Small white space */
+}
+
+.box-right {
+  height: 100vh;
+  width: 300px; /* Adjust width as needed */
+  padding-right: 0;
+  padding-left: 0;
+  position: absolute;
+  right: 0%;
+}
+
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.orders-header {
+  margin-bottom: 20px;
+}
+
+.orders-header h5 {
+  margin-bottom: 20px; /* Add more margin bottom */
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.orders-tabs {
+  margin-bottom: 20px; /* Add more margin bottom */
+}
+
+.orders-tabs .nav-link {
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.orders-tabs .nav-link.active {
+  background-color: #ffcc00;
+  color: #ffffff;
+}
+
+.orders-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item h6 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.order-item p {
+  margin: 5px 0;
+  font-size: 0.875rem;
+}
+
+.order-total {
+  color: green;
+  font-weight: bold;
+}
+
+.order-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.btn.view-all {
+  width: 100%;
+  background-color: #ffcc00;
+  color: #000000;
+  font-weight: bold;
 }
