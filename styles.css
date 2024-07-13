@@ -1,120 +1,160 @@
-body{
-    background-color: rgb(202, 190, 190);
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-#contenedor {
-  overflow: hidden;
+.container {
+  display: flex;
   height: 100vh;
 }
 
-#contenedor {
-  -ms-overflow-style: none;  /* For IE and Edge */
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
-/* For Webkit browsers like Chrome, Safari, and Opera */
-#contenedor::-webkit-scrollbar {
-  display: none;
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.box-left {
-  background-color: black;
-  height: 100vh;
-  width: 200px; /* Adjust width as needed */
-  margin-right: 1%; /* Small white space */
-  left: 0%;
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
 }
 
-.box-midle {
-  background-color: blue;
-  height: 100vh;
-  width: calc(100% - 220px - 310px); /* Adjust middle column to fill remaining space */
-  margin-right: 0%; /* Small white space */
+.sidebar li:hover {
+  background-color: #f0f0f0;
 }
 
-.box-right {
-  height: 100vh;
-  width: 300px; /* Adjust width as needed */
-  padding-right: 0;
-  padding-left: 0;
-  position: absolute;
-  right: 0%;
-}
-
-.orders-container {
+.main-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  background-color: #ffffff;
-  padding: 20px;
-}
-
-.orders-header {
-  margin-bottom: 20px;
-}
-
-.orders-header h5 {
-  margin-bottom: 20px; /* Add more margin bottom */
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.orders-tabs {
-  margin-bottom: 20px; /* Add more margin bottom */
-}
-
-.orders-tabs .nav-link {
-  color: #007bff;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.orders-tabs .nav-link.active {
-  background-color: #ffcc00;
-  color: #ffffff;
-}
-
-.orders-list {
-  flex-grow: 1;
+  margin-left: 16.7%;
+  margin-right: 20%;
   overflow-y: auto;
-  margin-bottom: 20px;
 }
 
-.order-item {
-  border-bottom: 1px solid #eaeaea;
-  padding: 10px 0;
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.order-item h6 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
+.header input {
+  width: 300px;
+  padding: 5px 10px;
 }
 
-.order-item p {
-  margin: 5px 0;
-  font-size: 0.875rem;
+.header button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.order-total {
-  color: green;
-  font-weight: bold;
+.products {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.order-img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+.products-title {
+  margin-bottom: 20px;
 }
 
-.btn.view-all {
-  width: 100%;
-  background-color: #ffcc00;
-  color: #000000;
-  font-weight: bold;
+.product-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.product {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  text-align: center;
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+}
+
+.payments {
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.payment:last-child {
+  border-bottom: none;
+}
+
+.right-sidebar {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.right-sidebar .order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.right-sidebar .order:last-child {
+  border-bottom: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-custom {
+  width: 48%;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-warning:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
 }
