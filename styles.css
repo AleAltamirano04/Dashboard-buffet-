@@ -85,13 +85,27 @@ body {
   background-color: #fff;
   padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 150px;
+  width: 150px; /* Asegúrate de que todas tengan el mismo ancho */
   text-align: center;
 }
 
 .product img {
   width: 100px;
   height: 100px;
+}
+
+.stock-control {
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+}
+
+.controlar-stock {
+  color: red; /* Color para 'Controlar Stock' */
+}
+
+.ver-stock {
+  color: black; /* Color para 'Ver Stock' */
 }
 
 .payments {
@@ -128,33 +142,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
 .right-sidebar .order:last-child {
   border-bottom: none;
 }
 
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+.text-btn {
+  background: none;
+  border: none;
+  color: yellow; /* Color de los botones de estado */
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1rem;
 }
 
-.btn-custom {
-  width: 48%;
+.button-group {
+  text-align: center;
+  margin-bottom: 20px; /* Espacio para los botones */
 }
 
 .btn-warning {
-  background-color: #ffc107;
+  background-color: yellow; /* Botón 'Ver Todo' amarillo */
+  color: black; /* Cambiar el color de texto a negro */
   border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.btn-warning:hover {
-  background-color: #e0a800;
-}
-
-.btn-warning:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+.order-img{
+  width: 80px;
 }

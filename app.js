@@ -25,8 +25,9 @@ const Header = () => (
 
 const Sidebar = () => (
     <div className="sidebar">
+        <img src="img/ImagenPrueba.jpg" alt="Logo" className="menu-logo" />
         <ul>
-            <li>Inicio</li>
+            <li className="active">Inicio</li>
             <li>Stock</li>
             <li>Ventas</li>
             <li>Configuración</li>
@@ -37,32 +38,35 @@ const Sidebar = () => (
 const MainContent = () => (
     <div>
         <div className="products">
-            <h2 className="products-title">Productos</h2>
-            <div className="product-list">
-                <div className="product">
-                    <img src="img/ImagenPrueba.jpg" alt="Don Satur" />
-                    <p>Don Satur</p>
-                    <button className="btn btn-link">Controlar Stock</button>
-                </div>
-                <div className="product">
-                    <img src="img/ImagenPrueba.jpg" alt="Maiz Inflado Dulce" />
-                    <p>Maiz Inflado Dulce</p>
-                    <button className="btn btn-link">Ver stock</button>
-                </div>
-                <div className="product">
-                    <img src="img/ImagenPrueba.jpg" alt="Lata de coca cola" />
-                    <p>Lata de coca cola</p>
-                    <button className="btn btn-link">Ver stock</button>
-                </div>
-                <div className="product">
-                    <img src="img/ImagenPrueba.jpg" alt="Alfajor Guaymallen" />
-                    <p>Alfajor Guaymallen</p>
-                    <button className="btn btn-link">Controlar Stock</button>
-                </div>
-                <div className="product">
-                    <img src="img/ImagenPrueba.jpg" alt="Gatorade" />
-                    <p>Gatorade</p>
-                    <button className="btn btn-link">Ver stock</button>
+            <button className="btn btn-primary" onClick={toggleProductos}>Ver Productos</button>
+            <div id="productos" style={{ display: 'block' }}>
+                <h2 className="products-title">Productos</h2>
+                <div className="product-list">
+                    <div className="product">
+                        <img src="img/ImagenPrueba.jpg" alt="Don Satur" />
+                        <p>Don Satur</p>
+                        <button className="btn btn-link">Controlar Stock</button>
+                    </div>
+                    <div className="product">
+                        <img src="img/ImagenPrueba.jpg" alt="Maiz Inflado Dulce" />
+                        <p>Maiz Inflado Dulce</p>
+                        <button className="btn btn-link">Ver stock</button>
+                    </div>
+                    <div className="product">
+                        <img src="img/ImagenPrueba.jpg" alt="Lata de coca cola" />
+                        <p>Lata de coca cola</p>
+                        <button className="btn btn-link">Ver stock</button>
+                    </div>
+                    <div className="product">
+                        <img src="img/ImagenPrueba.jpg" alt="Alfajor Guaymallen" />
+                        <p>Alfajor Guaymallen</p>
+                        <button className="btn btn-link">Controlar Stock</button>
+                    </div>
+                    <div className="product">
+                        <img src="img/ImagenPrueba.jpg" alt="Gatorade" />
+                        <p>Gatorade</p>
+                        <button className="btn btn-link">Ver stock</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,30 +77,42 @@ const MainContent = () => (
 const Payments = () => (
     <div className="payments">
         <h2>Pagos ingresados</h2>
-        <div className="payment">
-            <span>Juan Garcia</span>
-            <span>Nro de Pedido: 4</span>
-            <span>$1100</span>
-            <span>12:32</span>
-        </div>
-        <div className="payment">
-            <span>Leo Messi</span>
-            <span>Nro de Pedido: 3</span>
-            <span>$780</span>
-            <span>10:30</span>
-        </div>
-        <div className="payment">
-            <span>Esteban Martínez</span>
-            <span>Nro de Pedido: 2</span>
-            <span>$900</span>
-            <span>9:13</span>
-        </div>
-        <div className="payment">
-            <span>Sofía Barreira</span>
-            <span>Nro de Pedido: 1</span>
-            <span>$1000</span>
-            <span>6:40</span>
-        </div>
+        <table className="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nro de Pedido</th>
+                    <th>Pago</th>
+                    <th>Horario <button className="btn btn-secondary btn-sm">Más reciente</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Garcia</td>
+                    <td>4</td>
+                    <td>$1100</td>
+                    <td>12:32</td>
+                </tr>
+                <tr>
+                    <td>Leo Messi</td>
+                    <td>3</td>
+                    <td>$780</td>
+                    <td>10:30</td>
+                </tr>
+                <tr>
+                    <td>Esteban Martínez</td>
+                    <td>2</td>
+                    <td>$900</td>
+                    <td>9:13</td>
+                </tr>
+                <tr>
+                    <td>Sofía Barreira</td>
+                    <td>1</td>
+                    <td>$1000</td>
+                    <td>6:40</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 );
 
@@ -104,49 +120,58 @@ const RightSidebar = () => (
     <div className="right-sidebar">
         <h2>Todos los pedidos</h2>
         <div className="order">
+            <img src="img/ImagenPrueba.jpg" alt="Producto" className="order-img" />
             <div>
                 <p>Alumno 1</p>
-                <p>1 cafe + 2 medialunas</p>
+                <p>1 café + 2 medialunas</p>
+                <p className="text-success">Total: $1100</p>
             </div>
-            <p>$1100</p>
         </div>
         <div className="order">
+            <img src="img/ImagenPrueba.jpg" alt="Producto" className="order-img" />
             <div>
                 <p>Alumno 2</p>
                 <p>Don Satur</p>
+                <p className="text-success">Total: $700</p>
             </div>
-            <p>$700</p>
         </div>
         <div className="order">
+            <img src="img/ImagenPrueba.jpg" alt="Producto" className="order-img" />
             <div>
                 <p>Alumno 3</p>
                 <p>1 pepsi + Guaymallen</p>
+                <p className="text-success">Total: $1300</p>
             </div>
-            <p>$1300</p>
         </div>
         <div className="order">
+            <img src="img/ImagenPrueba.jpg" alt="Producto" className="order-img" />
             <div>
                 <p>Alumno 4</p>
-                <p>1 cafe + 2 medialunas</p>
+                <p>1 café + 2 medialunas</p>
+                <p className="text-success">Total: $1100</p>
             </div>
-            <p>$1100</p>
         </div>
         <div className="order">
+            <img src="img/ImagenPrueba.jpg" alt="Producto" className="order-img" />
             <div>
                 <p>Alumno 5</p>
                 <p>Galletita Opera</p>
+                <p className="text-success">Total: $700</p>
             </div>
-            <p>$700</p>
         </div>
         <div className="button-group">
-            <button className="btn btn-warning btn-custom">En Fila</button>
-            <button className="btn btn-warning btn-custom">Preparando</button>
+            <button className="btn btn-warning">En Fila</button>
+            <button className="btn btn-success">Retirados</button>
         </div>
-        <div className="button-group">
-            <button className="btn btn-warning btn-custom">Preparado</button>
-            <button className="btn btn-warning btn-custom">Entregado</button>
+        <div className="text-center mt-3">
+            <button className="btn btn-info">Ver Todo</button>
         </div>
     </div>
 );
+
+function toggleProductos() {
+    const productos = document.getElementById('productos');
+    productos.style.display = productos.style.display === 'none' ? 'block' : 'none';
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
